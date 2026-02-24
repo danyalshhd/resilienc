@@ -41,7 +41,6 @@ notification-service/
 ├── package.json
 ├── tsconfig.json
 ├── Dockerfile
-├── docker-compose.yml
 ├── src/
 │   ├── app.ts
 │   ├── index.ts
@@ -65,10 +64,6 @@ notification-service/
 │   │   └── notifications-store.ts
 │   ├── utils/
 │   │   └── response.ts
-│   ├── middlewares/
-│   │   └── error-handler.ts
-│   └── test/
-│       └── setup.ts
 └── node_modules/
 ```
 
