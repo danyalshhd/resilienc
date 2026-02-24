@@ -34,17 +34,44 @@ curl --location 'localhost:3000/health'
 
 Folder Structure
 
+```
 notification-service/
-├── README.md 
+├── README.md
 ├── .env
-├── package.json    
+├── package.json
+├── tsconfig.json
+├── Dockerfile
+├── docker-compose.yml
 ├── src/
-│ ├── enums
-│ └── events
-│ └── routes
-│ └── stores
-│ └── test
-│ └── utils
+│   ├── app.ts
+│   ├── index.ts
+│   ├── nats-wrapper.ts
+│   ├── enums/
+│   │   └── notification-status.ts
+│   ├── events/
+│   │   ├── subjects.ts
+│   │   ├── notification-created-event.ts
+│   │   ├── publishers/
+│   │   │   └── notification-created-publisher.ts
+│   │   └── listeners/
+│   │       ├── queue-group-name.ts
+│   │       └── notification-create-listener.ts
+│   ├── routes/
+│   │   ├── new.ts
+│   │   ├── show.ts
+│   │   ├── index.ts
+│   │   └── health.ts
+│   ├── stores/
+│   │   └── notifications-store.ts
+│   ├── utils/
+│   │   └── response.ts
+│   ├── middlewares/
+│   │   └── error-handler.ts
+│   └── test/
+│       └── setup.ts
+└── node_modules/
+```
+
 
 
 Design decision:
